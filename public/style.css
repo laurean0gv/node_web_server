@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #008170;
+}
+
+.header{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    background-color: #0F0F0F;
+    border-radius: 25px;
+    margin:1% 1% 0;
+}
+
+body{
+    background-color: #232D3F;
+}
+.contenedor {
+    display: grid;
+    text-align: center;    
+    align-items: center;
+    padding: 85px 0 0;
+}
+
+h2{
+    min-height: 55px;
+    max-height: 55px;
+}
+
+.poster{
+    border-radius: 90px;
+}
+
+.pelicula{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.pelicula:hover .sinopsis{
+    display:block;
+}
+
+.pelicula:hover .poster{
+    opacity: 0.3;
+}
+
+.puntaje{
+    background: #0F0F0F;
+    width: 12%;
+    height: 8%;
+    border-radius: 100%;
+    position:absolute;
+    left: 15%;
+    top: 77%;
+    align-content: center;
+}
+
+.sinopsis{
+    display:none;
+    background-color:transparent;
+    text-shadow: 100%;
+    color: #008170;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.sinopsis p{
+    font-size: 10px;
+    overflow:unset;
+}
+
+.paginacion{
+    display: block;
+    padding: 20px 0 20px;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+.paginacion button{
+    background-color: #0F0F0F;
+    border-radius: 50PX;
+}
+
+
+@media (max-width: 719px) {
+    .pelicula {
+        align-items: center;
+        text-align: center;
+        display: block;
+        width: 90%;
+        padding: 25px 5% ;
+    }
+
+    .poster{
+        width: 100%;
+    }
+
+    .paginacion button{        
+        width: 100PX;
+        height: 25PX;
+    }
+}
+
+@media (min-width: 720px) {
+/*     .header{
+        font-size: 34px;
+    } */
+    .contenedor {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .pelicula {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .poster{
+        width: 95%;
+        padding: 2.5%;
+    }
+
+    .paginacion button{
+        width: 175PX;
+        height: 40PX;
+    }
+}
+
+@media (min-width: 1080px) {
+/*     .header{
+        font-size: 50px;
+        height: 200px;
+    } */
+    .contenedor {
+        grid-template-columns: repeat(4, 1fr);
+        align-items: row;
+        align-items: center;
+        justify-content: center;
+        margin: 0 5%;
+    }
+    .pelicula {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+        width: 100%;
+        margin: 0;
+        padding: 2% 4%;        
+        min-width: 265px;
+        max-width: 400px;
+        min-height: 500px;
+        max-height: 500px;
+    }
+
+    .poster{
+        min-width: 290px;
+        max-width: 290px;
+        min-height: 350px;
+        padding: 2.5%;
+    }
+
+    .paginacion button{
+        margin-top: 25px;
+        width: 250PX;
+        height: 50PX;
+    }
+}   
