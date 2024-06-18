@@ -15,6 +15,11 @@ const startServer = (options) => {
         res.sendFile(indexPath);
     })
 
+    app.get("/series", (req, res)  => {
+        const indexPath = path.join(__dirname + `../../../${public_path}/series.html`);
+        res.sendFile(indexPath);
+    })
+
     app.listen(port);
 }
 
